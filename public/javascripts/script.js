@@ -7,6 +7,7 @@ function initializeGrid(height, width, pixSize) {
       var pixel = document.createElement("BUTTON");
       pixel.style.height = "20px";
       pixel.style.width = "20px";
+      pixel.style.background = "white";
       pixel.addEventListener("click", function() {
         this.style.background = penColor;
       })
@@ -30,6 +31,14 @@ function initializeColorRow(pixSize){
   paintWithAllTheColorsOfTheWind("orange");
   paintWithAllTheColorsOfTheWind("brown");
   paintWithAllTheColorsOfTheWind("blue");
+  paintWithAllTheColorsOfTheWind("chocolate");
+  paintWithAllTheColorsOfTheWind("gray");
+  paintWithAllTheColorsOfTheWind("orchid");
+  paintWithAllTheColorsOfTheWind("purple");
+  paintWithAllTheColorsOfTheWind("violet");
+  paintWithAllTheColorsOfTheWind("lime");
+  paintWithAllTheColorsOfTheWind("coral");
+  paintWithAllTheColorsOfTheWind("lightblue");
 
 };
 
@@ -44,7 +53,7 @@ function paintWithAllTheColorsOfTheWind(colorName, label){
   color.style.height = "40px";
   color.innerText = label;
   color.addEventListener("click", function() {
-    penColor = colorName;
+    setPenColor(colorName);
   });
   canvas.appendChild(color);
 }
